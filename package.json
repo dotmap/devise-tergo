@@ -3,8 +3,23 @@
   "version": "0.0.0",
   "description": "The backend for Devise",
   "main": "server.js",
+  "scripts": {
+    "cm": "git-cz"
+  },
   "repository": "git@github.com:multi-cell/devise-tergo",
   "author": "Graham Barber <grahammbarber@gmail.com>",
   "license": "Apache-2.0",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-customizable": "^5.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "cz-config.js"
+    }
+  }
 }
