@@ -2,8 +2,10 @@
   "name": "devise-tergo",
   "version": "0.0.0",
   "description": "The backend for Devise",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js -e js,mjs,gql",
     "cm": "git-cz",
     "test:lint": "eslint --fix **/*.js",
     "precommit": "lint-staged"
@@ -30,7 +32,8 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "husky": "^0.14.3",
-    "lint-staged": "^6.0.0"
+    "lint-staged": "^6.0.0",
+    "nodemon": "^1.13.3"
   },
   "config": {
     "commitizen": {
@@ -39,5 +42,10 @@
     "cz-customizable": {
       "config": "cz-config.js"
     }
+  },
+  "dependencies": {
+    "@std/esm": "^0.18.0",
+    "graphql-import": "^0.1.5",
+    "graphql-yoga": "^0.3.0"
   }
 }
