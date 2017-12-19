@@ -4,7 +4,8 @@
   "description": "The backend for Devise",
   "main": "server.js",
   "scripts": {
-    "cm": "git-cz"
+    "cm": "git-cz",
+    "test:lint": "eslint --fix **/*.js"
   },
   "repository": "git@github.com:multi-cell/devise-tergo",
   "author": "Graham Barber <grahammbarber@gmail.com>",
@@ -12,7 +13,13 @@
   "private": true,
   "devDependencies": {
     "commitizen": "^2.9.6",
-    "cz-customizable": "^5.2.0"
+    "cz-customizable": "^5.2.0",
+    "eslint": "^4.13.1",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
   },
   "config": {
     "commitizen": {
