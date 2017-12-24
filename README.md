@@ -1,5 +1,7 @@
 # devise-tergo
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/multi-cell/devise-tergo.svg)](https://greenkeeper.io/)
+
 > Make great game documentation
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
