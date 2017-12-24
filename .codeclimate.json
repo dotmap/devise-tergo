@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "plugins": {
+    "eslint": {
+      "enabled": true,
+      "channel": "eslint-4",
+      "config": {
+        "extensions": [
+          ".js",
+          ".mjs"
+        ]
+      }
+    },
+    "fixme": {
+      "enabled": true,
+      "config": {
+        "strings": [
+          "TODO",
+          "BUG",
+          "FIXME",
+          "NOTE"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "devise-tergo",
+  "version": "0.0.0",
+  "description": "The backend for Devise",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js -e js,mjs,gql",
+    "cm": "git-cz",
+    "test:lint": "eslint --fix **/*.js",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "linters": {
+      "**/*.js": [
+        "eslint --fix",
+        "git add"
+      ]
+    }
+  },
+  "repository": "git@github.com:multi-cell/devise-tergo",
+  "author": "Graham Barber <grahammbarber@gmail.com>",
+  "license": "Apache-2.0",
+  "private": true,
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-customizable": "^5.2.0",
+    "eslint": "^4.13.1",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "nodemon": "^1.13.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "cz-config.js"
+    }
+  },
+  "dependencies": {
+    "@std/esm": "^0.18.0",
+    "graphql-import": "^0.1.5",
+    "graphql-yoga": "^0.3.0"
+  }
+}
