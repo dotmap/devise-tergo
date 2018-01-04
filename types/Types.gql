@@ -1,0 +1,64 @@
+type Game {
+  id: ID!
+  name: String!
+  elements: [Element!]
+  media: [Media!]
+  editors: [User!]!
+}
+
+type User {
+  id: ID,
+  name: String!
+  firstName: String!
+  lastName: String
+  username: String!
+  picture: String
+  email: String!
+  games: [Game]
+  organizations: [Organization]
+  meta: Meta!
+}
+
+type Meta {
+  verified: Boolean!
+  locale: String
+  updated: String!
+  created: String!
+  lastIp: String!
+  lastLogin: String!
+  logins: Int!
+}
+
+type Organization {
+  id: ID!
+  name: String!
+  users: [User!]!
+}
+
+type Element {
+  id: Int!
+  name: String!
+  type: String
+  tags: [Tag!],
+  media: [Media!],
+  content: String
+}
+
+type Tag {
+  id: ID!
+  color: String!
+}
+
+enum Hosting {
+  DRIVE
+  BOX
+  DROPBOX
+  S3
+  PUBLIC
+}
+
+type Media {
+  id: String!
+  location: Hosting!
+  publicUrl: String
+}
